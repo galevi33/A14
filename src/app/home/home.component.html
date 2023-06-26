@@ -1,7 +1,77 @@
-﻿<div class="p-4">
+﻿<div style="background-image: URL('/assets/backgr.png')" class="p-4">
+
     <div class="container">
         <h1>Angular 14 - CRUD Example with Reactive Forms</h1>
         <p>An example app showing how to list, add, edit and delete user records with Angular 14.</p>
         <p>👉 <a routerLink="/users">Manage Users</a></p>
+        
+        
+        <div class="Rectangle3" style="width: 730px; height: 60px; background: white; border-radius: 17px; border-left: 1px #0043C0 solid; border-top: 1px #0043C0 solid; border-right: 1px #0043C0 solid; border-bottom: 1px #0043C0 solid"></div>
+        
+        <div class="IconlyLightSearch" style="width: 23px; height: 23px; position: relative">
+            <div class="Search" style="width: 17.98px; height: 18.42px; left: 2.66px; top: 2.66px; position: absolute">
+              <div class="Ellipse739" style="width: 17.23px; height: 17.23px; left: 0px; top: 0px; position: absolute; border-radius: 9999px; border: 1px #0043C0 solid"></div>
+              <div class="Line181" style="width: 3.38px; height: 3.37px; left: 14.61px; top: 15.05px; position: absolute; border: 1px #0043C0 solid"></div>
+            </div>
+          </div>
+        
+        
+        
+        <div *ngFor="let pok of ExtendedPokemonList" class="card">
+
+            <div class="innerCard">
+                <img class="monster" src="{{pok.photo}}">
+            </div>
+            <div class="monsterTitle">{{pok.name}}</div>
+
+        </div>
     </div>
-</div>
+    <style>
+        .card {
+            background-color: white;
+            ;
+            width: 160px;
+            height: 210px;
+            display: inline-block;
+            margin: 10px;
+            border-radius: 17px;
+            transition: transform .2s;
+            cursor: pointer;
+        }
+        .card:hover {
+  transform: scale(1.1); 
+}
+        .innerCard {
+            background-image: URL('/assets/lbg.png');
+            width: 144px;
+            height: 144px;
+            background-size: contain;
+            border-radius: 10px;
+            border-style: solid;
+    border-color: #e6f8ff;
+    margin: 7px;
+    border-width: thin;
+        }
+
+        .monster {
+            height: 100%;
+            /* background-repeat: no-repeat;
+          
+            width: 100%;
+            display: block;
+         margin-left: auto;
+            margin-right: auto; */
+        }
+
+        .monsterTitle {
+            color: #1F0079;
+            text-align: center;
+            font-size: 16px;
+            font-family: Rubik;
+            font-style: italic;
+            font-weight: 600;
+            line-height: 16px;
+            text-transform: uppercase;
+
+        }
+    </style>
